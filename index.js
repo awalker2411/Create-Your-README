@@ -1,64 +1,65 @@
 const inquirer = require ('inquirer');
 const fs = require('fs');
+const generateMarkdown = require(`./utils/generateMarkdown`);
 
-const prompts = [
+const questions = [
     {
-        prompt: 'What is the title of your project?',
+        message: 'What is the title of your project?',
         type: 'input',
         name: 'title'
     },
 
     {
-        prompt: 'Please describe your project.',
+        message: 'Please describe your project.',
         type: 'input',
         name: 'description'
     },
 
     
     {
-        prompt: 'Are there any required installations for your project?',
+        message: 'Are there any required installations for your project?',
         type: 'input',
         name: 'installation'
     },
 
     {
-        prompt: 'What are the usage steps for your project?',
+        message: 'What are the usage steps for your project?',
         type: 'input',
         name: 'usage'
     },
     
     {
-        prompt: 'What are the tests for your project?',
+        message: 'What are the tests for your project?',
         type: 'input',
         name: 'tests'
     },
     
     {
-        prompt: 'What is the URL for your deployed application?',
+        message: 'What is the URL for your deployed application?',
         type: 'input',
         name: 'URL'
     },
 
     {
-        prompt: 'Who are the contributors to your project?',
+        message: 'Who are the contributors to your project?',
         type: 'input',
         name: 'credits'
     },
     
     {
-        prompt: 'What is your Github Username?',
+        message: 'What is your Github Username?',
         type: 'input',
         name: 'gitUser'
     },
     
     {
-        prompt: 'What is your email address?',
+        message: 'What is your email address?',
         type: 'input',
         name: 'email'
     },
     
     {
-        prompt: 'What is the license of your project?',
+        message: 'What is the license of your project?',
         type: 'list',
         listItems: [
             'Mozilla',
@@ -70,4 +71,22 @@ const prompts = [
         ],
         name: 'license'
     }
-];
+]
+
+
+function writeToFile(fileName, data) {
+    const content = generateMarkdown(data);
+    fs.writeFileSync(fileName, content);
+}
+
+
+
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        writeToFile('README.md', generateMarkdown(answers))  
+    });
+}
+
+
+
+init();
