@@ -19,7 +19,7 @@ const questions = [
     {
         message: 'Are there any required installations for your project?',
         type: 'input',
-        name: 'installation'
+        name: 'installations'
     },
 
     {
@@ -37,13 +37,13 @@ const questions = [
     {
         message: 'What is the URL for your deployed application?',
         type: 'input',
-        name: 'URL'
+        name: 'url'
     },
 
     {
         message: 'Who are the contributors to your project?',
         type: 'input',
-        name: 'credits'
+        name: 'contributors'
     },
     
     {
@@ -61,7 +61,7 @@ const questions = [
     {
         message: 'What is the license of your project?',
         type: 'list',
-        listItems: [
+        choices: [
             'Mozilla',
             'GNU',
             'MIT',
@@ -75,8 +75,9 @@ const questions = [
 
 
 function writeToFile(fileName, data) {
-    const content = generateMarkdown(data);
-    fs.writeFileSync(fileName, content);
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.log(err): console.log('Your Professional README has been created!')
+    });
 }
 
 
