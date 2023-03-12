@@ -39,3 +39,5 @@ MIT
 ![LICENSE](https://img.shields.io/badge/License-MIT-informational.svg)
 
 https://opensource.org/license/mit/
+
+https://www.youtube.com/watch?v=q8HzxnYhqBw&ab_channel=Awalker2411
