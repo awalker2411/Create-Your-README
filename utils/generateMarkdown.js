@@ -31,33 +31,43 @@ function generateMarkdown(data) {
         # `+data.title+`
         
         ## Description
-        <br>`+data.description+`
+        
+        `+data.description+`
         
         ## Any Required Installations?
-        <br>`+data.installations+`
+        
+        `+data.installations+`
         
         ## Usage
-        <br>`+data.usage+`
+        
+        `+data.usage+`
         
         ## Tests
-        <br>`+data.tests+`
+        
+        `+data.tests+`
         
         ## Live URL 
-        <br>`+data.url+`
+        
+        `+data.url+`
 
         ## Contributors
-        <br>`+data.contributors+`
+        
+        `+data.contributors+`
 
         ## Github Information
-        <br>`+data.gitUser+`
+        
+        `+data.gitUser+`
 
         ## Contact Information
-        <br>`+data.email+`
+        
+        `+data.email+`
 
         ## License
-        <br>`+data.license+`
-        <br>`+renderLicenseBadge(data.license)+`
-        <br>`+renderLicenseLink(data.license)+`
+        `+data.license+`
+        
+        `+renderLicenseBadge(data.license)+`
+        
+        `+renderLicenseLink(data.license)+`
     `;
 }
     
