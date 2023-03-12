@@ -2,7 +2,7 @@ function renderLicenseBadge(license) {
     if(license === `No License`){
         return ``;
     } else {
-        return `https://img.shields.io/badge/License-`+license+`-informational.svg`;
+        return `![licenseBadge](https://img.shields.io/badge/License-`+license+`-informational.svg)`;
     }
 }
 
@@ -27,37 +27,36 @@ function renderLicenseLink(license) {
 
 
 function generateMarkdown(data) {
-    return `
-        # `+data.title+`
+    return `### `+data.title+`
         
-        ## Description
-        <br>`+data.description+`
+        *Description*
+        `+data.description+`
         
-        ## Any Required Installations?
-        <br>`+data.installations+`
+        *Any Required Installations?*
+        `+data.installations+`
         
-        ## Usage
-        <br>`+data.usage+`
+        *Usage*
+        `+data.usage+`
         
-        ## Tests
-        <br>`+data.tests+`
+        *Tests*
+        `+data.tests+`
         
-        ## Live URL 
-        <br>`+data.url+`
+        *Live URL* 
+        `+data.url+`
 
-        ## Contributors
-        <br>`+data.contributors+`
+        *Contributors*
+        `+data.contributors+`
 
-        ## Github Information
-        <br>`+data.gitUser+`
+        *Github Information*
+        `+data.gitUser+`
 
-        ## Contact Information
-        <br>`+data.email+`
+        *Contact Information*
+        `+data.email+`
 
-        ## License
-        <br>`+data.license+`
-        <br>`+renderLicenseBadge(data.license)+`
-        <br>`+renderLicenseLink(data.license)+`
+        *License*
+        `+data.license+`
+        `+renderLicenseBadge(data.license)+`
+        `+renderLicenseLink(data.license)+`
     `;
 }
     

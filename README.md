@@ -1,32 +1,31 @@
-
-        # me
+### Create-Your-Readme
         
-        ## Description
-        <br>me
+        *Description*
+        An application that creates a proffessional README by asking questions about your project!
         
-        ## Any Required Installations?
-        <br>me
+        *Any Required Installations?*
+        Inquirer
         
-        ## Usage
-        <br>me
+        *Usage*
+        Open your command line, change to the target directory that you want to generate a README.md. Type `node index` in the command line, and begin answering the prompts! Your inputs will then be used to generate the README.
         
-        ## Tests
-        <br>me
+        *Tests*
+        No tests
         
-        ## Live URL 
-        <br>me
+        *Live URL* 
+        Not Deployed
 
-        ## Contributors
-        <br>me
+        *Contributors*
+        Anthony Walker
 
-        ## Github Information
-        <br>me
+        *Github Information*
+        Awalker2411
 
-        ## Contact Information
-        <br>me
+        *Contact Information*
+        awalker2411@yahoo.com
 
-        ## License
-        <br>MIT
-        <br>https://img.shields.io/badge/License-MIT-informational.svg
-        <br>https://opensource.org/license/mit/
+        *License*
+        MIT
+        ![licenseBadge](https://img.shields.io/badge/License-MIT-informational.svg)
+        https://opensource.org/license/mit/
     
